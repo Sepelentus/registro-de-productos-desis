@@ -1,0 +1,23 @@
+Para ejecutar el proyecto de manera local se utilizo Docker.
+
+Requisitos:
+- Docker y Docker Compose instalados en tu sistema (ej: Docker Desktop en Windows).
+
+Instrucciones de Instalacion y Ejecucion:
+1. Abrir una terminal en la raiz de este proyecto.
+2. Crear un archivo llamado ".env" basándote en el archivo ".env.example" proporcionado.
+3. Ejecutar el comando para construir y levantar los contenedores en segundo plano:
+   docker-compose up -d --build
+4. La base de datos (PostgreSQL) se inicializara automaticamente ejecutando en orden alfabetico la estructura de base de datos y despues se insertaran los datos iniciales de las tablas maestras.
+5. Abrir tu navegador web e ingresar a:
+   http://localhost:8000
+6. Para detener el proyecto, ejecutar en la terminal:
+   docker-compose down
+
+En caso de errores:
+1. Si entrega un error de puertos al iniciar el PostgreSQL, significa que ya tienes un PostgreSQL corriendo en el puerto 5432. Para solucionarlo, puedes detener el PostgreSQL que tienes corriendo o cambiar el puerto en el archivo ".env" y en el archivo "docker-compose.yml".
+
+
+Version de PHP: 8.3
+Version de PostgreSQL: 16
+Las validaciones son compatibles con versiones modernas de navegadores.
