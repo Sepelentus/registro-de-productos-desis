@@ -20,4 +20,3 @@ En caso de errores:
 
 Version de PHP: 8.3
 Version de PostgreSQL: 16
-Las validaciones son compatibles con versiones modernas de navegadores.

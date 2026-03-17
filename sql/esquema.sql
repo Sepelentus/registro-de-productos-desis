@@ -27,7 +27,7 @@ CREATE TABLE productos (
     bodega_id INT REFERENCES bodegas(id) NOT NULL,
     sucursal_id INT REFERENCES sucursales(id) NOT NULL,
     moneda_id INT REFERENCES monedas(id) NOT NULL,
-    precio_unitario DECIMAL(10, 2) NOT NULL CONSTRAINT precio_unitario_check CHECK (precio_unitario > 0),
+    precio_unitario DECIMAL(10, 2) NOT NULL CONSTRAINT precio_unitario_check CHECK (precio_unitario > 0)
 );
 
 -- Debido a que un producto debe tener al menos 2 materiales, se crea una tabla intermedia (Relacion N:N)
