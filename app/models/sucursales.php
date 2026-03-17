@@ -1,4 +1,3 @@
-<!-- Obtencion de sucursales para el dropdown -->
 <?php
 function getSucursalesByBodega($bodega_id)
 {
@@ -8,4 +7,3 @@ function getSucursalesByBodega($bodega_id)
     $stmt->execute(['bodega_id' => $bodega_id]);
     return $stmt->fetchAll();
 }
-?>

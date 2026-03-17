@@ -7,4 +7,3 @@ function getMateriales()
     $stmt->execute();
     return $stmt->fetchAll();
 }
-?>

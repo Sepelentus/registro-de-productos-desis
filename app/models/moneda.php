@@ -1,4 +1,3 @@
-<!-- Obtencion de monedas para el dropdown -->
 <?php
 function getMonedas()
 {
@@ -8,4 +7,3 @@ function getMonedas()
     $stmt->execute();
     return $stmt->fetchAll();
 }
-?>

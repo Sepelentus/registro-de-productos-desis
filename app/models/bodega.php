@@ -1,4 +1,3 @@
-<!-- Obtencion de bodegas para el dropdown -->
 <?php
 function getBodegas()
 {
