@@ -36,3 +36,9 @@ CREATE TABLE productos_materiales (
     material_id INT NOT NULL REFERENCES materiales(id) ON DELETE CASCADE,
     PRIMARY KEY (producto_id, material_id)
 );
+
+-- Índices para las llaves foráneas, para que cuando se busque por ejemplo la sucursal de una bodega, sea más rápido (Probablemente opcional, pero nunca esta mal agregar indices :) )
+CREATE INDEX idx_sucursales_bodega_id ON sucursales(bodega_id);
+CREATE INDEX idx_productos_bodega_id ON productos(bodega_id);
+CREATE INDEX idx_productos_sucursal_id ON productos(sucursal_id);
+CREATE INDEX idx_productos_moneda_id ON productos(moneda_id);
