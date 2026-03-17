@@ -5,13 +5,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
 }
 
 .form-container {
     width: 100%;
-    max-width: 1000px;
+    max-width: 850px;
     min-height: 800px;
     padding: 40px;
     background-color: #ffffff;
@@ -24,7 +24,7 @@ h1 {
     text-align: center;
     margin-top: 0;
     padding: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     font-size: 48px;
 }
 
@@ -40,6 +40,10 @@ h1 {
     flex-direction: column;
 }
 
+label {
+    margin-bottom: 10px;
+}
+
 .full-width {
     display: flex;
     flex-direction: column;
@@ -48,6 +52,7 @@ h1 {
 
 .textarea {
     min-height: 80px;
+    /* Altura minima para evitar que se vea muy pequeño*/
     resize: vertical;
 }
 
@@ -63,6 +68,7 @@ h1 {
     align-items: center;
     gap: 8px;
     cursor: pointer;
+    padding: 3px;
 }
 
 .btn-container {
@@ -76,12 +82,26 @@ h1 {
     font-size: 16px;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 12px 60px;
+    border-radius: 8px;
     cursor: pointer;
-    font-weight: bold;
+    min-width: 350px;
+    min-height: 60px;
 }
 
 .save-button:hover {
     background-color: #169375;
+}
+
+/* Recuadro mas bonito para los textos */
+input[type="text"],
+select,
+textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1.5px solid #282828;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-family: inherit;
+    font-size: 16px;
+    /* Heredar fuente ya que en textarea no se aplicaba */
 }

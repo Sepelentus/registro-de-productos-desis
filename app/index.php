@@ -25,11 +25,11 @@ $materiales = getMateriales();
             <div class="row">
                 <div class="col">
                     <label for="codigo_producto">Código</label>
-                    <input type="text" name="codigo_producto" id="codigo_producto" class="text" placeholder="PROD01K">
+                    <input type="text" name="codigo_producto" id="codigo_producto" class="text">
                 </div>
                 <div class="col">
                     <label for="nombre_producto">Nombre</label>
-                    <input type="text" name="nombre_producto" id="nombre_producto" class="text" placeholder="Set Comedor">
+                    <input type="text" name="nombre_producto" id="nombre_producto" class="text">
                 </div>
             </div>
 
@@ -67,7 +67,7 @@ $materiales = getMateriales();
                 </div>
                 <div class="col">
                     <label for="precio_unitario">Precio</label>
-                    <input type="text" name="precio_unitario" id="precio_unitario" class="text" placeholder="1500">
+                    <input type="text" name="precio_unitario" id="precio_unitario" class="text">
                 </div>
             </div>
 
@@ -76,7 +76,9 @@ $materiales = getMateriales();
                 <div class="checkbox-group">
                     <?php foreach ($materiales as $material): ?>
                         <label class="checkbox-label">
-                            <input type="checkbox" name="material[]" value="<?php echo htmlspecialchars($material['id']); ?>" id="material_<?php echo htmlspecialchars($material['id']); ?>">
+                            <input type="checkbox" name="material[]"
+                                value="<?php echo htmlspecialchars($material['id']); ?>"
+                                id="material_<?php echo htmlspecialchars($material['id']); ?>">
                             <?php echo htmlspecialchars($material['nombre']); ?>
                         </label>
                     <?php endforeach; ?>
